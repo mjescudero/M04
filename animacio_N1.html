@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+             .pilota {
+                width: 100px;
+                height: 100px;
+                display: block;
+                background:yellow;
+                border-radius: 50%;
+                background: radial-gradient(
+                            circle at 0 0,
+                            hsl(60,100%,50%) 25%,
+                            hsl(60,100%,30%) 70%,
+                            hsl(60,100%,1%));
+                            
+                animation-name: rebota;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                animation-delay: 1s;
+                animation-direction:alternate
+                
+            }
+            
+           
+            @keyframes rebota{
+                    25% {
+                        transform:  translateY(800px) translateX(200px);
+                        }
+                    50% { 
+                        transform:  translateX(400px);
+                         }
+                    75%{
+                        transform: translateY(800px) translateX(600px);
+                    }
+                    100%{
+                        transform:  translateX(900px);
+                    }
+                     
+                }
+           
+        </style>
+    </head>
+    <body>
+        <div class="pilota"></div>  
+     </body>
+</html>

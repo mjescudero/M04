@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            
+            .contenidor{
+                height: 700px;
+                width: 1000px;
+                display: block;
+                background:blue;
+               
+            }
+             .pilota {
+                width: 100px;
+                height: 100px;
+                display: block;
+                position: relative;
+                background:yellow;
+                border-radius: 50%;
+                background: radial-gradient(
+                            circle at 0 0,
+                            hsl(60,100%,50%) 25%,
+                            hsl(60,100%,30%) 70%,
+                            hsl(60,100%,1%));
+                            
+                
+                animation:rebota2;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-delay: 1s;
+                /*animation-direction:alternate;
+                /*animation-timing-function: ease-out*/
+                              
+            }
+
+
+            @keyframes rebota{
+                    25% {
+                        transform:  translateY(600px) translateX(200px) scaleY(0.8);
+                        
+                        }
+                    50% { 
+                        transform:  translateX(400px) scaleY(0.8) ;
+                         }
+                    75%{
+                        transform: translateY(600px) translateX(600px)scaleY(0.8);
+                    }
+                    100%{
+                        transform:  translateX(800px)scaleY(0.8);
+                    }
+                     
+                }
+
+                @keyframes rebota2{
+                    25% {
+                        transform:  translateY(600px) translateX(300px) scaleY(0.8);animation-timing-function:linear;
+                        
+                        }
+                    60% { 
+                        transform: translateY(300px)  translateX(600px) scaleY(0.8);animation-timing-function:ease-out
+                         }
+                    100%{
+                        transform: translateY(600px) translateX(900px) scaleY(0.8);
+                    }
+                    
+                     
+                }
+                          
+        </style>
+    </head>
+    <body>
+        <div class = "contenidor">
+            <div class="pilota"></div> 
+        </div>
+       
+     </body>
+</html>
